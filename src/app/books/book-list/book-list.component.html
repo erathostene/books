@@ -3,9 +3,13 @@
     <h2>{{favoriteMessage}}</h2>
 
     <div class="row">
-      <div class="col-md-4" *ngFor="let book of books">
+      <div class="col-md-4"
+           *ngFor="let book of books">
         <div class="card mb-1">
-          <img src="{{book.imageUrl.replace('app','src')}}" alt="{{book.name}}" class="card-img-top m-auto " *ngIf="showImage">
+          <img src="{{book.imageUrl.replace('app','')}}"
+               alt="{{book.name}}"
+               class="card-img-top m-auto "
+               *ngIf="showImage">
           <div class="card-block">
             <div class="clearfix"></div>
             <h4 class="card-title float-right">{{book.price|currency:'EUR':true}}</h4>
@@ -14,11 +18,14 @@
             <p><b>Description : </b>{{book.description|truncate:30}}</p>
             <p><b>Published On : </b>{{book.releaseDate | date:longDate}}</p>
             <p class="{{book.inStock?'text-success':'text-danger'}}"><b>In Stock : </b>{{book.inStock?"Yes":"No"}}</p>
-            <span class="fa fa-star" *ngFor="let star of book.starRating|fillArray"></span>
+            <span class="fa fa-star"
+                  *ngFor="let star of book.starRating|fillArray"></span>
             <p class="float-right">Rating : {{book.starRating}}</p>
             <div class="clearfix"></div>
 
-            <app-favorites [reviews]="book.starRating" [favorite]="book.name" (favoriteClicked)="onFavoriteClicked($event)"></app-favorites>
+            <app-favorites [reviews]="book.starRating"
+                           [favorite]="book.name"
+                           (favoriteClicked)="onFavoriteClicked($event)"></app-favorites>
           </div>
         </div>
       </div>

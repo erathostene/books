@@ -10,4 +10,5 @@ export interface IBook {
   price: Number;
   startRating: Number;
   imageUrl: String;
+  specifications: String;
 }

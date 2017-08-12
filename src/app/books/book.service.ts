@@ -15,7 +15,7 @@ export class BookService {
   constructor(private http: Http) { }
   getBooks(): Observable<IBook[]> {
     return this.http
-      .get('src/api/books/books.json')
+      .get('assets/api/books/books.json')
       .map((res: Response) => <IBook[]>res.json())
       // .do(data => console.log(data))
       .catch(this.handleError);

@@ -1,12 +1,16 @@
 <div class="container">
   <section class="row">
     <div class="col-md-4">
-      <img src="{{book?.imageUrl.replace('app','src')}}" alt="War and Peace" class="img-fluid">
+      <img src="{{book?.imageUrl.replace('app','')}}"
+           alt="War and Peace"
+           class="img-fluid">
     </div>
     <div class="col-md-8">
       <h2>{{book?.name}}</h2>
       <div class="price text-success">{{book?.price|currency:'USD':true}}</div>
-      <p>Quantity<select name="" id="" class="form-control">
+      <p>Quantity<select name=""
+                id=""
+                class="form-control">
           <option value="">1</option>
           <option value="">2</option>
           <option value="">3</option>
@@ -14,45 +18,87 @@
           <option value="">5</option>
         </select>
       </p>
-      <a href="#" class="btn btn-success">Buy Now</a>
-      <div id="accordion" role="tablist" aria-multiselectable="true">
+      <a href="#"
+         class="btn btn-success">Buy Now</a>
+      <div id="accordion"
+           role="tablist"
+           aria-multiselectable="true">
         <div class="card">
-          <div id="headingOne" class="card-header" role="tab">
+          <div id="headingOne"
+               class="card-header"
+               role="tab">
             <h5 class="mb-0">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Description</a>
+              <a data-toggle="collapse"
+                 data-parent="#accordion"
+                 href="#collapseOne"
+                 aria-expanded="true"
+                 aria-controls="collapseOne">Description</a>
             </h5>
           </div>
-          <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+          <div id="collapseOne"
+               class="collapse show"
+               role="tabpanel"
+               aria-labelledby="headingOne">
             <div class="card-block">{{book?.description}}</div>
           </div>
         </div>
         <div class="card">
-          <div id="headingTwo" class="card-header" role="tab">
+          <div id="headingTwo"
+               class="card-header"
+               role="tab">
             <h5 class="mb-0">
-              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">Specification</a>
+              <a class="collapsed"
+                 data-toggle="collapse"
+                 data-parent="#accordion"
+                 href="#collapseTwo"
+                 aria-expanded="true"
+                 aria-controls="collapseOne">Specification</a>
             </h5>
           </div>
-          <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div id="collapseTwo"
+               class="collapse"
+               role="tabpanel"
+               aria-labelledby="headingTwo">
             <div class="card-block">{{book?.specifications}}</div>
           </div>
         </div>
         <div class="card">
-          <div id="headingThree" class="card-header" role="tab">
+          <div id="headingThree"
+               class="card-header"
+               role="tab">
             <h5 class="mb-0">
-              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseOne">Release Date</a>
+              <a class="collapsed"
+                 data-toggle="collapse"
+                 data-parent="#accordion"
+                 href="#collapseThree"
+                 aria-expanded="true"
+                 aria-controls="collapseOne">Release Date</a>
             </h5>
           </div>
-          <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div id="collapseThree"
+               class="collapse"
+               role="tabpanel"
+               aria-labelledby="headingThree">
             <div class="card-block">{{book?.releaseDate}}</div>
           </div>
         </div>
         <div class="card">
-          <div id="headingFour" class="card-header" role="tab">
+          <div id="headingFour"
+               class="card-header"
+               role="tab">
             <h5 class="mb-0">
-              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseOne">Genre</a>
+              <a class="collapsed"
+                 data-toggle="collapse"
+                 data-parent="#accordion"
+                 href="#collapseFour"
+                 aria-expanded="true"
+                 aria-controls="collapseOne">Genre</a>
             </h5>
           </div>
-          <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
+          <div id="collapseFour"
+               class="collapse"
+               role="tabpanel"
+               aria-labelledby="headingFour">
             <div class="card-block">{{book?.genre}}</div>
           </div>
         </div>

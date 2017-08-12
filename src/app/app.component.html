@@ -10,19 +10,37 @@
     </div>
   </header>
   <nav class="navbar navbar-toggleable-sm navbar-light">
-    <button type="button" data-toggle="collapse" data-target="#navBar" class="navbar-toggler navbar-toggler-right" aria-controls="navbarNav"
-      aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+    <button type="button"
+            data-toggle="collapse"
+            data-target="#navBar"
+            class="navbar-toggler navbar-toggler-right"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
     </button>
-    <div id="navBar" class="collapse navbar-collapse">
+    <a href="#"
+       class="navbar-brand">Books !</a>
+    <div id="navBar"
+         class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item" routerLinkActive="active"><a class="nav-link" [routerLink]="['/home']">Home</a></li>
-        <li class="nav-item" routerLinkActive="active"><a class="nav-link" [routerLink]="['/books']">All Books</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">{{searchBox}}</a></li>
+        <li class="nav-item"
+            routerLinkActive="active"><a class="nav-link"
+             [routerLink]="['/home']">Home</a></li>
+        <li class="nav-item"
+            routerLinkActive="active"><a class="nav-link"
+             [routerLink]="['/books']">All Books</a></li>
+        <li class="nav-item"><a class="nav-link"
+             href="#">{{searchBox}}</a></li>
 
       </ul>
       <form class="form-inline my-2 my-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search..." [(ngModel)]="searchBox" name="searchBox">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        <input class="form-control mr-sm-2"
+               type="text"
+               placeholder="Search..."
+               [(ngModel)]="searchBox"
+               name="searchBox">
+        <button class="btn btn-secondary my-2 my-sm-0"
+                type="submit">Search</button>
       </form>
     </div>
   </nav>
